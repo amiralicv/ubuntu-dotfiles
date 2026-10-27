@@ -1,0 +1,831 @@
+{
+  "main": {
+    "prefix": "main",
+    "body": [
+      "fn main() {",
+      "    $0",
+      "}"
+    ],
+    "description": "main()"
+  },
+  "fn": {
+    "prefix": "fn",
+    "body": [
+      "fn ${1:name}(${2:args}) -> ${3:()} {",
+      "    $0",
+      "}"
+    ],
+    "description": "function"
+  },
+  "pfn": {
+    "prefix": "pfn",
+    "body": [
+      "pub fn ${1:name}(${2:args}) -> ${3:()} {",
+      "    $0",
+      "}"
+    ],
+    "description": "pub function"
+  },
+  "afn": {
+    "prefix": "afn",
+    "body": [
+      "async fn ${1:name}(${2:args}) -> ${3:()} {",
+      "    $0",
+      "}"
+    ],
+    "description": "async function"
+  },
+  "pafn": {
+    "prefix": "pafn",
+    "body": [
+      "pub async fn ${1:name}(${2:args}) -> ${3:()} {",
+      "    $0",
+      "}"
+    ],
+    "description": "pub async function"
+  },
+  "let": {
+    "prefix": "let",
+    "body": [
+      "let ${1:name} = ${2:value};$0"
+    ],
+    "description": "let"
+  },
+  "letm": {
+    "prefix": "letm",
+    "body": [
+      "let mut ${1:name} = ${2:value};$0"
+    ],
+    "description": "let mut"
+  },
+  "const": {
+    "prefix": "const",
+    "body": [
+      "const ${1:NAME}: ${2:usize} = ${3:0};$0"
+    ],
+    "description": "const"
+  },
+  "static": {
+    "prefix": "static",
+    "body": [
+      "static ${1:NAME}: ${2:&str} = ${3:\"\"};$0"
+    ],
+    "description": "static"
+  },
+  "struct": {
+    "prefix": "struct",
+    "body": [
+      "struct ${1:Name} {",
+      "    ${2:field}: ${3:i32},$0",
+      "}"
+    ],
+    "description": "struct"
+  },
+  "pstruct": {
+    "prefix": "pstruct",
+    "body": [
+      "pub struct ${1:Name} {",
+      "    pub ${2:field}: ${3:i32},$0",
+      "}"
+    ],
+    "description": "pub struct"
+  },
+  "tuplestruct": {
+    "prefix": "tstruct",
+    "body": [
+      "struct ${1:Name}(${2:i32});$0"
+    ],
+    "description": "tuple struct"
+  },
+  "enum": {
+    "prefix": "enum",
+    "body": [
+      "enum ${1:Name} {",
+      "    ${2:Variant},$0",
+      "}"
+    ],
+    "description": "enum"
+  },
+  "penum": {
+    "prefix": "penum",
+    "body": [
+      "pub enum ${1:Name} {",
+      "    ${2:Variant},$0",
+      "}"
+    ],
+    "description": "pub enum"
+  },
+  "impl": {
+    "prefix": "impl",
+    "body": [
+      "impl ${1:Type} {",
+      "    $0",
+      "}"
+    ],
+    "description": "impl"
+  },
+  "implt": {
+    "prefix": "implt",
+    "body": [
+      "impl ${1:Trait} for ${2:Type} {",
+      "    $0",
+      "}"
+    ],
+    "description": "impl trait for type"
+  },
+  "trait": {
+    "prefix": "trait",
+    "body": [
+      "trait ${1:Name} {",
+      "    $0",
+      "}"
+    ],
+    "description": "trait"
+  },
+  "ptrait": {
+    "prefix": "ptrait",
+    "body": [
+      "pub trait ${1:Name} {",
+      "    $0",
+      "}"
+    ],
+    "description": "pub trait"
+  },
+  "new": {
+    "prefix": "new",
+    "body": [
+      "pub fn new(${1:args}) -> Self {",
+      "    Self { $0 }",
+      "}"
+    ],
+    "description": "new() constructor"
+  },
+  "type": {
+    "prefix": "type",
+    "body": [
+      "type ${1:Alias} = ${2:Type};$0"
+    ],
+    "description": "type alias"
+  },
+  "mod": {
+    "prefix": "mod",
+    "body": [
+      "mod ${1:name} {",
+      "    $0",
+      "}"
+    ],
+    "description": "mod"
+  },
+  "use": {
+    "prefix": "use",
+    "body": [
+      "use ${1:std::collections::HashMap};$0"
+    ],
+    "description": "use"
+  },
+  "derive": {
+    "prefix": "derive",
+    "body": [
+      "#[derive(${1:Debug, Clone})]$0"
+    ],
+    "description": "derive"
+  },
+  "derivefull": {
+    "prefix": "derivef",
+    "body": [
+      "#[derive(Debug, Clone, PartialEq, Eq, Hash)]$0"
+    ],
+    "description": "derive common traits"
+  },
+  "allow": {
+    "prefix": "allow",
+    "body": [
+      "#![allow(${1:dead_code})]$0"
+    ],
+    "description": "allow lint"
+  },
+  "cfgtest": {
+    "prefix": "cfgtest",
+    "body": [
+      "#[cfg(test)]",
+      "mod tests {",
+      "    use super::*;",
+      "",
+      "    #[test]",
+      "    fn ${1:it_works}() {",
+      "        $0",
+      "    }",
+      "}"
+    ],
+    "description": "test module"
+  },
+  "test": {
+    "prefix": "test",
+    "body": [
+      "#[test]",
+      "fn ${1:name}() {",
+      "    $0",
+      "}"
+    ],
+    "description": "test fn"
+  },
+  "tokiotest": {
+    "prefix": "tokiotest",
+    "body": [
+      "#[tokio::test]",
+      "async fn ${1:name}() {",
+      "    $0",
+      "}"
+    ],
+    "description": "tokio test"
+  },
+  "tokiomain": {
+    "prefix": "tokiomain",
+    "body": [
+      "#[tokio::main]",
+      "async fn main() {",
+      "    $0",
+      "}"
+    ],
+    "description": "tokio main"
+  },
+  "println": {
+    "prefix": "println",
+    "body": [
+      "println!(\"${1:{}}\"${2:, ${3:args}});$0"
+    ],
+    "description": "println!"
+  },
+  "eprintln": {
+    "prefix": "eprintln",
+    "body": [
+      "eprintln!(\"${1:{}}\"${2:, ${3:args}});$0"
+    ],
+    "description": "eprintln!"
+  },
+  "print": {
+    "prefix": "print",
+    "body": [
+      "print!(\"${1:{}}\"${2:, ${3:args}});$0"
+    ],
+    "description": "print!"
+  },
+  "format": {
+    "prefix": "format",
+    "body": [
+      "format!(\"${1:{}}\"${2:, ${3:args}})$0"
+    ],
+    "description": "format!"
+  },
+  "dbg": {
+    "prefix": "dbg",
+    "body": [
+      "dbg!(${1:expr});$0"
+    ],
+    "description": "dbg!"
+  },
+  "pd": {
+    "prefix": "pd",
+    "body": [
+      "println!(\"${1:var} = {:?}\", $1);$0"
+    ],
+    "description": "print debug var"
+  },
+  "panic": {
+    "prefix": "panic",
+    "body": [
+      "panic!(\"${1:msg}\");$0"
+    ],
+    "description": "panic!"
+  },
+  "todo": {
+    "prefix": "todo",
+    "body": [
+      "todo!()$0"
+    ],
+    "description": "todo!"
+  },
+  "unimplemented": {
+    "prefix": "unimpl",
+    "body": [
+      "unimplemented!()$0"
+    ],
+    "description": "unimplemented!"
+  },
+  "unreachable": {
+    "prefix": "unreachable",
+    "body": [
+      "unreachable!()$0"
+    ],
+    "description": "unreachable!"
+  },
+  "assert": {
+    "prefix": "assert",
+    "body": [
+      "assert!(${1:cond});$0"
+    ],
+    "description": "assert!"
+  },
+  "asserteq": {
+    "prefix": "assert_eq",
+    "body": [
+      "assert_eq!(${1:left}, ${2:right});$0"
+    ],
+    "description": "assert_eq!"
+  },
+  "assertne": {
+    "prefix": "assert_ne",
+    "body": [
+      "assert_ne!(${1:left}, ${2:right});$0"
+    ],
+    "description": "assert_ne!"
+  },
+  "vec": {
+    "prefix": "vec",
+    "body": [
+      "vec![${1}]$0"
+    ],
+    "description": "vec!"
+  },
+  "matches": {
+    "prefix": "matches",
+    "body": [
+      "matches!(${1:expr}, ${2:pattern})$0"
+    ],
+    "description": "matches!"
+  },
+  "write": {
+    "prefix": "write",
+    "body": [
+      "write!(${1:f}, \"${2:{}}\"${3:, ${4:args}})$0"
+    ],
+    "description": "write!"
+  },
+  "writeln": {
+    "prefix": "writeln",
+    "body": [
+      "writeln!(${1:f}, \"${2:{}}\"${3:, ${4:args}})$0"
+    ],
+    "description": "writeln!"
+  },
+  "if": {
+    "prefix": "if",
+    "body": [
+      "if ${1:cond} {",
+      "    $0",
+      "}"
+    ],
+    "description": "if"
+  },
+  "ife": {
+    "prefix": "ife",
+    "body": [
+      "if ${1:cond} {",
+      "    $2",
+      "} else {",
+      "    $0",
+      "}"
+    ],
+    "description": "if/else"
+  },
+  "iflet": {
+    "prefix": "iflet",
+    "body": [
+      "if let ${1:Some(x)} = ${2:expr} {",
+      "    $0",
+      "}"
+    ],
+    "description": "if let"
+  },
+  "letelse": {
+    "prefix": "letelse",
+    "body": [
+      "let ${1:Some(x)} = ${2:expr} else {",
+      "    ${3:return;}",
+      "};$0"
+    ],
+    "description": "let else"
+  },
+  "whilelet": {
+    "prefix": "whilelet",
+    "body": [
+      "while let ${1:Some(x)} = ${2:expr} {",
+      "    $0",
+      "}"
+    ],
+    "description": "while let"
+  },
+  "while": {
+    "prefix": "while",
+    "body": [
+      "while ${1:cond} {",
+      "    $0",
+      "}"
+    ],
+    "description": "while"
+  },
+  "loop": {
+    "prefix": "loop",
+    "body": [
+      "loop {",
+      "    $0",
+      "}"
+    ],
+    "description": "loop"
+  },
+  "for": {
+    "prefix": "for",
+    "body": [
+      "for ${1:item} in ${2:iter} {",
+      "    $0",
+      "}"
+    ],
+    "description": "for"
+  },
+  "forr": {
+    "prefix": "forr",
+    "body": [
+      "for ${1:i} in ${2:0}..${3:n} {",
+      "    $0",
+      "}"
+    ],
+    "description": "for range"
+  },
+  "match": {
+    "prefix": "match",
+    "body": [
+      "match ${1:expr} {",
+      "    ${2:pattern} => ${3:value},",
+      "    _ => ${4:todo!()},",
+      "}$0"
+    ],
+    "description": "match"
+  },
+  "matchopt": {
+    "prefix": "mopt",
+    "body": [
+      "match ${1:expr} {",
+      "    Some(${2:v}) => ${3:v},",
+      "    None => ${4:todo!()},",
+      "}$0"
+    ],
+    "description": "match Option"
+  },
+  "matchres": {
+    "prefix": "mres",
+    "body": [
+      "match ${1:expr} {",
+      "    Ok(${2:v}) => ${3:v},",
+      "    Err(${4:e}) => ${5:return Err(e.into())},",
+      "}$0"
+    ],
+    "description": "match Result"
+  },
+  "closure": {
+    "prefix": "cl",
+    "body": [
+      "|${1:x}| ${2:x}$0"
+    ],
+    "description": "closure"
+  },
+  "closureb": {
+    "prefix": "clb",
+    "body": [
+      "|${1:x}| {",
+      "    $0",
+      "}"
+    ],
+    "description": "closure block"
+  },
+  "impldisplay": {
+    "prefix": "impldisplay",
+    "body": [
+      "impl std::fmt::Display for ${1:Type} {",
+      "    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {",
+      "        write!(f, \"${2:{}}\"${3:, self.0})",
+      "    }",
+      "}$0"
+    ],
+    "description": "impl Display"
+  },
+  "implfrom": {
+    "prefix": "implfrom",
+    "body": [
+      "impl From<${1:Other}> for ${2:Type} {",
+      "    fn from(${3:value}: $1) -> Self {",
+      "        $0",
+      "    }",
+      "}"
+    ],
+    "description": "impl From"
+  },
+  "impldefault": {
+    "prefix": "impldefault",
+    "body": [
+      "impl Default for ${1:Type} {",
+      "    fn default() -> Self {",
+      "        Self { $0 }",
+      "    }",
+      "}"
+    ],
+    "description": "impl Default"
+  },
+  "impliter": {
+    "prefix": "impliter",
+    "body": [
+      "impl Iterator for ${1:Type} {",
+      "    type Item = ${2:u32};",
+      "",
+      "    fn next(&mut self) -> Option<Self::Item> {",
+      "        $0",
+      "    }",
+      "}"
+    ],
+    "description": "impl Iterator"
+  },
+  "impldrop": {
+    "prefix": "impldrop",
+    "body": [
+      "impl Drop for ${1:Type} {",
+      "    fn drop(&mut self) {",
+      "        $0",
+      "    }",
+      "}"
+    ],
+    "description": "impl Drop"
+  },
+  "error": {
+    "prefix": "error",
+    "body": [
+      "#[derive(Debug, thiserror::Error)]",
+      "enum ${1:Error} {",
+      "    #[error(\"${2:message}\")]",
+      "    ${3:Variant},$0",
+      "}"
+    ],
+    "description": "thiserror enum"
+  },
+  "result": {
+    "prefix": "res",
+    "body": [
+      "Result<${1:()}, ${2:Box<dyn std::error::Error>}>$0"
+    ],
+    "description": "Result<>"
+  },
+  "option": {
+    "prefix": "opt",
+    "body": [
+      "Option<${1:T}>$0"
+    ],
+    "description": "Option<>"
+  },
+  "box": {
+    "prefix": "box",
+    "body": [
+      "Box<${1:T}>$0"
+    ],
+    "description": "Box<>"
+  },
+  "rc": {
+    "prefix": "rc",
+    "body": [
+      "Rc<${1:T}>$0"
+    ],
+    "description": "Rc<>"
+  },
+  "arc": {
+    "prefix": "arc",
+    "body": [
+      "Arc<${1:T}>$0"
+    ],
+    "description": "Arc<>"
+  },
+  "arcmutex": {
+    "prefix": "arcm",
+    "body": [
+      "Arc<Mutex<${1:T}>>$0"
+    ],
+    "description": "Arc<Mutex<>>"
+  },
+  "refcell": {
+    "prefix": "rcc",
+    "body": [
+      "Rc<RefCell<${1:T}>>$0"
+    ],
+    "description": "Rc<RefCell<>>"
+  },
+  "hashmap": {
+    "prefix": "hashmap",
+    "body": [
+      "let mut ${1:map}: HashMap<${2:K}, ${3:V}> = HashMap::new();$0"
+    ],
+    "description": "HashMap"
+  },
+  "hashset": {
+    "prefix": "hashset",
+    "body": [
+      "let mut ${1:set}: HashSet<${2:T}> = HashSet::new();$0"
+    ],
+    "description": "HashSet"
+  },
+  "btreemap": {
+    "prefix": "btreemap",
+    "body": [
+      "let mut ${1:map}: BTreeMap<${2:K}, ${3:V}> = BTreeMap::new();$0"
+    ],
+    "description": "BTreeMap"
+  },
+  "vecnew": {
+    "prefix": "vnew",
+    "body": [
+      "let mut ${1:v}: Vec<${2:T}> = Vec::new();$0"
+    ],
+    "description": "Vec::new"
+  },
+  "string": {
+    "prefix": "sfrom",
+    "body": [
+      "String::from(\"${1}\")$0"
+    ],
+    "description": "String::from"
+  },
+  "tostring": {
+    "prefix": "tos",
+    "body": [
+      "${1:x}.to_string()$0"
+    ],
+    "description": "to_string"
+  },
+  "unwrap": {
+    "prefix": "unwrap",
+    "body": [
+      ".unwrap()$0"
+    ],
+    "description": "unwrap"
+  },
+  "expect": {
+    "prefix": "expect",
+    "body": [
+      ".expect(\"${1:msg}\")$0"
+    ],
+    "description": "expect"
+  },
+  "unwrapor": {
+    "prefix": "unwrapor",
+    "body": [
+      ".unwrap_or(${1:default})$0"
+    ],
+    "description": "unwrap_or"
+  },
+  "unwrapordefault": {
+    "prefix": "unwrapd",
+    "body": [
+      ".unwrap_or_default()$0"
+    ],
+    "description": "unwrap_or_default"
+  },
+  "okor": {
+    "prefix": "okor",
+    "body": [
+      ".ok_or(${1:err})?$0"
+    ],
+    "description": "ok_or"
+  },
+  "maperr": {
+    "prefix": "maperr",
+    "body": [
+      ".map_err(|${1:e}| ${2:e})?$0"
+    ],
+    "description": "map_err"
+  },
+  "iter": {
+    "prefix": "iter",
+    "body": [
+      ".iter()$0"
+    ],
+    "description": "iter"
+  },
+  "intoiter": {
+    "prefix": "intoiter",
+    "body": [
+      ".into_iter()$0"
+    ],
+    "description": "into_iter"
+  },
+  "itermap": {
+    "prefix": "imap",
+    "body": [
+      ".iter().map(|${1:x}| ${2:x}).collect::<${3:Vec<_>}>()$0"
+    ],
+    "description": "iter map collect"
+  },
+  "iterfilter": {
+    "prefix": "ifilter",
+    "body": [
+      ".iter().filter(|${1:x}| ${2:cond}).collect::<${3:Vec<_>}>()$0"
+    ],
+    "description": "iter filter collect"
+  },
+  "collect": {
+    "prefix": "collect",
+    "body": [
+      ".collect::<${1:Vec<_>}>()$0"
+    ],
+    "description": "collect"
+  },
+  "lifetime": {
+    "prefix": "lifetime",
+    "body": [
+      "<'${1:a}>$0"
+    ],
+    "description": "lifetime"
+  },
+  "readfile": {
+    "prefix": "readfile",
+    "body": [
+      "let ${1:contents} = std::fs::read_to_string(${2:path})?;$0"
+    ],
+    "description": "read_to_string"
+  },
+  "readline": {
+    "prefix": "readline",
+    "body": [
+      "let mut ${1:line} = String::new();",
+      "std::io::stdin().read_line(&mut $1)?;$0"
+    ],
+    "description": "read stdin line"
+  },
+  "spawn": {
+    "prefix": "spawn",
+    "body": [
+      "std::thread::spawn(move || {",
+      "    $0",
+      "});"
+    ],
+    "description": "thread::spawn"
+  },
+  "tokiospawn": {
+    "prefix": "tokiospawn",
+    "body": [
+      "tokio::spawn(async move {",
+      "    $0",
+      "});"
+    ],
+    "description": "tokio::spawn"
+  },
+  "mutex": {
+    "prefix": "mutex",
+    "body": [
+      "let ${1:m} = Mutex::new(${2:value});$0"
+    ],
+    "description": "Mutex::new"
+  },
+  "unsafe": {
+    "prefix": "unsafe",
+    "body": [
+      "unsafe {",
+      "    $0",
+      "}"
+    ],
+    "description": "unsafe block"
+  },
+  "cfg": {
+    "prefix": "cfg",
+    "body": [
+      "#[cfg(${1:test})]$0"
+    ],
+    "description": "cfg"
+  },
+  "inline": {
+    "prefix": "inline",
+    "body": [
+      "#[inline]$0"
+    ],
+    "description": "inline"
+  },
+  "macrorules": {
+    "prefix": "macro",
+    "body": [
+      "macro_rules! ${1:name} {",
+      "    (${2:\\$x:expr}) => {",
+      "        $0",
+      "    };",
+      "}"
+    ],
+    "description": "macro_rules!"
+  },
+  "doc": {
+    "prefix": "doc",
+    "body": [
+      "/// ${1:Description}$0"
+    ],
+    "description": "doc comment"
+  },
+  "moddoc": {
+    "prefix": "moddoc",
+    "body": [
+      "//! ${1:Module description}$0"
+    ],
+    "description": "module doc comment"
+  }
+}

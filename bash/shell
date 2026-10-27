@@ -1,0 +1,11 @@
+# History (Omarchy-style: big, shared, deduped)
+HISTCONTROL=ignoreboth:erasedups
+HISTSIZE=32768
+HISTFILESIZE="$HISTSIZE"
+shopt -s histappend cdspell autocd globstar checkwinsize
+
+export EDITOR=nvim
+export SUDO_EDITOR="$EDITOR"
+export BAT_THEME=gruvbox-dark
+export PATH="$HOME/.local/bin:$HOME/.cargo/bin:$PATH"
+export FZF_DEFAULT_OPTS="--color=bg+:#3c3836,bg:#282828,spinner:#89b482,hl:#7daea3,fg:#d4be98,header:#7daea3,info:#d8a657,pointer:#89b482,marker:#89b482,fg+:#d4be98,prompt:#d8a657,hl+:#7daea3,border:#665c54"

@@ -1,0 +1,746 @@
+{
+  "print": {
+    "prefix": "print",
+    "body": [
+      "print($1)$0"
+    ],
+    "description": "print()"
+  },
+  "len": {
+    "prefix": "len",
+    "body": [
+      "len($1)$0"
+    ],
+    "description": "len()"
+  },
+  "range": {
+    "prefix": "range",
+    "body": [
+      "range($1)$0"
+    ],
+    "description": "range()"
+  },
+  "enumerate": {
+    "prefix": "enumerate",
+    "body": [
+      "enumerate($1)$0"
+    ],
+    "description": "enumerate()"
+  },
+  "zip": {
+    "prefix": "zip",
+    "body": [
+      "zip($1)$0"
+    ],
+    "description": "zip()"
+  },
+  "isinstance": {
+    "prefix": "isinstance",
+    "body": [
+      "isinstance($1)$0"
+    ],
+    "description": "isinstance()"
+  },
+  "sorted": {
+    "prefix": "sorted",
+    "body": [
+      "sorted($1)$0"
+    ],
+    "description": "sorted()"
+  },
+  "sum": {
+    "prefix": "sum",
+    "body": [
+      "sum($1)$0"
+    ],
+    "description": "sum()"
+  },
+  "min": {
+    "prefix": "min",
+    "body": [
+      "min($1)$0"
+    ],
+    "description": "min()"
+  },
+  "max": {
+    "prefix": "max",
+    "body": [
+      "max($1)$0"
+    ],
+    "description": "max()"
+  },
+  "open": {
+    "prefix": "open",
+    "body": [
+      "open($1)$0"
+    ],
+    "description": "open()"
+  },
+  "input": {
+    "prefix": "input",
+    "body": [
+      "input($1)$0"
+    ],
+    "description": "input()"
+  },
+  "int": {
+    "prefix": "int",
+    "body": [
+      "int($1)$0"
+    ],
+    "description": "int()"
+  },
+  "str": {
+    "prefix": "str",
+    "body": [
+      "str($1)$0"
+    ],
+    "description": "str()"
+  },
+  "float": {
+    "prefix": "float",
+    "body": [
+      "float($1)$0"
+    ],
+    "description": "float()"
+  },
+  "list": {
+    "prefix": "list",
+    "body": [
+      "list($1)$0"
+    ],
+    "description": "list()"
+  },
+  "dict": {
+    "prefix": "dict",
+    "body": [
+      "dict($1)$0"
+    ],
+    "description": "dict()"
+  },
+  "set": {
+    "prefix": "set",
+    "body": [
+      "set($1)$0"
+    ],
+    "description": "set()"
+  },
+  "tuple": {
+    "prefix": "tuple",
+    "body": [
+      "tuple($1)$0"
+    ],
+    "description": "tuple()"
+  },
+  "map": {
+    "prefix": "map",
+    "body": [
+      "map($1)$0"
+    ],
+    "description": "map()"
+  },
+  "filter": {
+    "prefix": "filter",
+    "body": [
+      "filter($1)$0"
+    ],
+    "description": "filter()"
+  },
+  "any": {
+    "prefix": "any",
+    "body": [
+      "any($1)$0"
+    ],
+    "description": "any()"
+  },
+  "all": {
+    "prefix": "all",
+    "body": [
+      "all($1)$0"
+    ],
+    "description": "all()"
+  },
+  "abs": {
+    "prefix": "abs",
+    "body": [
+      "abs($1)$0"
+    ],
+    "description": "abs()"
+  },
+  "type": {
+    "prefix": "type",
+    "body": [
+      "type($1)$0"
+    ],
+    "description": "type()"
+  },
+  "super": {
+    "prefix": "super",
+    "body": [
+      "super($1)$0"
+    ],
+    "description": "super()"
+  },
+  "bool": {
+    "prefix": "bool",
+    "body": [
+      "bool($1)$0"
+    ],
+    "description": "bool()"
+  },
+  "bytes": {
+    "prefix": "bytes",
+    "body": [
+      "bytes($1)$0"
+    ],
+    "description": "bytes()"
+  },
+  "bytearray": {
+    "prefix": "bytearray",
+    "body": [
+      "bytearray($1)$0"
+    ],
+    "description": "bytearray()"
+  },
+  "callable": {
+    "prefix": "callable",
+    "body": [
+      "callable($1)$0"
+    ],
+    "description": "callable()"
+  },
+  "chr": {
+    "prefix": "chr",
+    "body": [
+      "chr($1)$0"
+    ],
+    "description": "chr()"
+  },
+  "ord": {
+    "prefix": "ord",
+    "body": [
+      "ord($1)$0"
+    ],
+    "description": "ord()"
+  },
+  "dir": {
+    "prefix": "dir",
+    "body": [
+      "dir($1)$0"
+    ],
+    "description": "dir()"
+  },
+  "divmod": {
+    "prefix": "divmod",
+    "body": [
+      "divmod($1)$0"
+    ],
+    "description": "divmod()"
+  },
+  "format": {
+    "prefix": "format",
+    "body": [
+      "format($1)$0"
+    ],
+    "description": "format()"
+  },
+  "getattr": {
+    "prefix": "getattr",
+    "body": [
+      "getattr($1)$0"
+    ],
+    "description": "getattr()"
+  },
+  "setattr": {
+    "prefix": "setattr",
+    "body": [
+      "setattr($1)$0"
+    ],
+    "description": "setattr()"
+  },
+  "hasattr": {
+    "prefix": "hasattr",
+    "body": [
+      "hasattr($1)$0"
+    ],
+    "description": "hasattr()"
+  },
+  "delattr": {
+    "prefix": "delattr",
+    "body": [
+      "delattr($1)$0"
+    ],
+    "description": "delattr()"
+  },
+  "hash": {
+    "prefix": "hash",
+    "body": [
+      "hash($1)$0"
+    ],
+    "description": "hash()"
+  },
+  "hex": {
+    "prefix": "hex",
+    "body": [
+      "hex($1)$0"
+    ],
+    "description": "hex()"
+  },
+  "bin": {
+    "prefix": "bin",
+    "body": [
+      "bin($1)$0"
+    ],
+    "description": "bin()"
+  },
+  "oct": {
+    "prefix": "oct",
+    "body": [
+      "oct($1)$0"
+    ],
+    "description": "oct()"
+  },
+  "id": {
+    "prefix": "id",
+    "body": [
+      "id($1)$0"
+    ],
+    "description": "id()"
+  },
+  "iter": {
+    "prefix": "iter",
+    "body": [
+      "iter($1)$0"
+    ],
+    "description": "iter()"
+  },
+  "next": {
+    "prefix": "next",
+    "body": [
+      "next($1)$0"
+    ],
+    "description": "next()"
+  },
+  "issubclass": {
+    "prefix": "issubclass",
+    "body": [
+      "issubclass($1)$0"
+    ],
+    "description": "issubclass()"
+  },
+  "pow": {
+    "prefix": "pow",
+    "body": [
+      "pow($1)$0"
+    ],
+    "description": "pow()"
+  },
+  "repr": {
+    "prefix": "repr",
+    "body": [
+      "repr($1)$0"
+    ],
+    "description": "repr()"
+  },
+  "reversed": {
+    "prefix": "reversed",
+    "body": [
+      "reversed($1)$0"
+    ],
+    "description": "reversed()"
+  },
+  "round": {
+    "prefix": "round",
+    "body": [
+      "round($1)$0"
+    ],
+    "description": "round()"
+  },
+  "slice": {
+    "prefix": "slice",
+    "body": [
+      "slice($1)$0"
+    ],
+    "description": "slice()"
+  },
+  "vars": {
+    "prefix": "vars",
+    "body": [
+      "vars($1)$0"
+    ],
+    "description": "vars()"
+  },
+  "frozenset": {
+    "prefix": "frozenset",
+    "body": [
+      "frozenset($1)$0"
+    ],
+    "description": "frozenset()"
+  },
+  "complex": {
+    "prefix": "complex",
+    "body": [
+      "complex($1)$0"
+    ],
+    "description": "complex()"
+  },
+  "property": {
+    "prefix": "property",
+    "body": [
+      "property($1)$0"
+    ],
+    "description": "property()"
+  },
+  "staticmethod": {
+    "prefix": "staticmethod",
+    "body": [
+      "staticmethod($1)$0"
+    ],
+    "description": "staticmethod()"
+  },
+  "classmethod": {
+    "prefix": "classmethod",
+    "body": [
+      "classmethod($1)$0"
+    ],
+    "description": "classmethod()"
+  },
+  "exec": {
+    "prefix": "exec",
+    "body": [
+      "exec($1)$0"
+    ],
+    "description": "exec()"
+  },
+  "eval": {
+    "prefix": "eval",
+    "body": [
+      "eval($1)$0"
+    ],
+    "description": "eval()"
+  },
+  "globals": {
+    "prefix": "globals",
+    "body": [
+      "globals($1)$0"
+    ],
+    "description": "globals()"
+  },
+  "locals": {
+    "prefix": "locals",
+    "body": [
+      "locals($1)$0"
+    ],
+    "description": "locals()"
+  },
+  "breakpoint": {
+    "prefix": "breakpoint",
+    "body": [
+      "breakpoint($1)$0"
+    ],
+    "description": "breakpoint()"
+  },
+  "main": {
+    "prefix": "main",
+    "body": [
+      "def main() -> None:",
+      "    $0",
+      "",
+      "",
+      "if __name__ == \"__main__\":",
+      "    main()"
+    ],
+    "description": "main entry point"
+  },
+  "ifmain": {
+    "prefix": "ifmain",
+    "body": [
+      "if __name__ == \"__main__\":",
+      "    ${1:main()}$0"
+    ],
+    "description": "if __name__ == __main__"
+  },
+  "def": {
+    "prefix": "def",
+    "body": [
+      "def ${1:name}(${2:args}) -> ${3:None}:",
+      "    ${4:pass}$0"
+    ],
+    "description": "function"
+  },
+  "adef": {
+    "prefix": "adef",
+    "body": [
+      "async def ${1:name}(${2:args}) -> ${3:None}:",
+      "    ${4:pass}$0"
+    ],
+    "description": "async function"
+  },
+  "class": {
+    "prefix": "class",
+    "body": [
+      "class ${1:Name}:",
+      "    def __init__(self${2:, args}) -> None:",
+      "        ${3:pass}$0"
+    ],
+    "description": "class"
+  },
+  "dataclass": {
+    "prefix": "dataclass",
+    "body": [
+      "@dataclass",
+      "class ${1:Name}:",
+      "    ${2:field}: ${3:int}$0"
+    ],
+    "description": "dataclass"
+  },
+  "for": {
+    "prefix": "for",
+    "body": [
+      "for ${1:item} in ${2:items}:",
+      "    ${3:pass}$0"
+    ],
+    "description": "for loop"
+  },
+  "fore": {
+    "prefix": "fore",
+    "body": [
+      "for ${1:i}, ${2:item} in enumerate(${3:items}):",
+      "    ${4:pass}$0"
+    ],
+    "description": "for enumerate"
+  },
+  "forr": {
+    "prefix": "forr",
+    "body": [
+      "for ${1:i} in range(${2:n}):",
+      "    ${3:pass}$0"
+    ],
+    "description": "for range"
+  },
+  "while": {
+    "prefix": "while",
+    "body": [
+      "while ${1:cond}:",
+      "    ${2:pass}$0"
+    ],
+    "description": "while loop"
+  },
+  "if": {
+    "prefix": "if",
+    "body": [
+      "if ${1:cond}:",
+      "    ${2:pass}$0"
+    ],
+    "description": "if"
+  },
+  "ife": {
+    "prefix": "ife",
+    "body": [
+      "if ${1:cond}:",
+      "    ${2:pass}",
+      "else:",
+      "    ${3:pass}$0"
+    ],
+    "description": "if/else"
+  },
+  "elif": {
+    "prefix": "elif",
+    "body": [
+      "elif ${1:cond}:",
+      "    ${2:pass}$0"
+    ],
+    "description": "elif"
+  },
+  "try": {
+    "prefix": "try",
+    "body": [
+      "try:",
+      "    ${1:pass}",
+      "except ${2:Exception} as ${3:e}:",
+      "    ${4:raise}$0"
+    ],
+    "description": "try/except"
+  },
+  "tryf": {
+    "prefix": "tryf",
+    "body": [
+      "try:",
+      "    ${1:pass}",
+      "except ${2:Exception} as ${3:e}:",
+      "    ${4:raise}",
+      "finally:",
+      "    ${5:pass}$0"
+    ],
+    "description": "try/except/finally"
+  },
+  "with": {
+    "prefix": "with",
+    "body": [
+      "with ${1:open(path)} as ${2:f}:",
+      "    ${3:pass}$0"
+    ],
+    "description": "with"
+  },
+  "withopen": {
+    "prefix": "withopen",
+    "body": [
+      "with open(${1:path}, \"${2:r}\") as ${3:f}:",
+      "    ${4:pass}$0"
+    ],
+    "description": "with open"
+  },
+  "lc": {
+    "prefix": "lc",
+    "body": [
+      "[${1:x} for ${2:x} in ${3:items}${4: if ${5:cond}}]$0"
+    ],
+    "description": "list comprehension"
+  },
+  "dc": {
+    "prefix": "dc",
+    "body": [
+      "{${1:k}: ${2:v} for ${3:k}, ${4:v} in ${5:items}}$0"
+    ],
+    "description": "dict comprehension"
+  },
+  "sc": {
+    "prefix": "sc",
+    "body": [
+      "{${1:x} for ${2:x} in ${3:items}}$0"
+    ],
+    "description": "set comprehension"
+  },
+  "gen": {
+    "prefix": "gen",
+    "body": [
+      "(${1:x} for ${2:x} in ${3:items})$0"
+    ],
+    "description": "generator expression"
+  },
+  "lambda": {
+    "prefix": "lambda",
+    "body": [
+      "lambda ${1:x}: ${2:x}$0"
+    ],
+    "description": "lambda"
+  },
+  "imp": {
+    "prefix": "imp",
+    "body": [
+      "import ${1:module}$0"
+    ],
+    "description": "import"
+  },
+  "from": {
+    "prefix": "from",
+    "body": [
+      "from ${1:module} import ${2:name}$0"
+    ],
+    "description": "from import"
+  },
+  "match": {
+    "prefix": "match",
+    "body": [
+      "match ${1:value}:",
+      "    case ${2:pattern}:",
+      "        ${3:pass}",
+      "    case _:",
+      "        ${4:pass}$0"
+    ],
+    "description": "match/case"
+  },
+  "assert": {
+    "prefix": "assert",
+    "body": [
+      "assert ${1:cond}, ${2:\"msg\"}$0"
+    ],
+    "description": "assert"
+  },
+  "raise": {
+    "prefix": "raise",
+    "body": [
+      "raise ${1:ValueError}(${2:\"msg\"})$0"
+    ],
+    "description": "raise"
+  },
+  "pp": {
+    "prefix": "pp",
+    "body": [
+      "print(f\"${1:var} = {${1}!r}\")$0"
+    ],
+    "description": "print debug f-string"
+  },
+  "log": {
+    "prefix": "log",
+    "body": [
+      "logger = logging.getLogger(__name__)$0"
+    ],
+    "description": "logger"
+  },
+  "argparse": {
+    "prefix": "argparse",
+    "body": [
+      "parser = argparse.ArgumentParser(description=\"${1:desc}\")",
+      "parser.add_argument(\"${2:arg}\", ${3:help=\"...\"})",
+      "args = parser.parse_args()$0"
+    ],
+    "description": "argparse"
+  },
+  "prop": {
+    "prefix": "prop",
+    "body": [
+      "@property",
+      "def ${1:name}(self) -> ${2:int}:",
+      "    return self._${1}$0"
+    ],
+    "description": "property"
+  },
+  "test": {
+    "prefix": "test",
+    "body": [
+      "def test_${1:name}() -> None:",
+      "    ${2:assert True}$0"
+    ],
+    "description": "pytest test"
+  },
+  "fixture": {
+    "prefix": "fixture",
+    "body": [
+      "@pytest.fixture",
+      "def ${1:name}():",
+      "    ${2:yield}$0"
+    ],
+    "description": "pytest fixture"
+  },
+  "parametrize": {
+    "prefix": "parametrize",
+    "body": [
+      "@pytest.mark.parametrize(\"${1:arg}\", [${2:1, 2}])$0"
+    ],
+    "description": "pytest parametrize"
+  },
+  "asyncmain": {
+    "prefix": "asyncmain",
+    "body": [
+      "asyncio.run(${1:main()})$0"
+    ],
+    "description": "asyncio.run"
+  },
+  "jsonload": {
+    "prefix": "jsonload",
+    "body": [
+      "with open(${1:path}) as f:",
+      "    ${2:data} = json.load(f)$0"
+    ],
+    "description": "json load"
+  },
+  "defdunder": {
+    "prefix": "dunder",
+    "body": [
+      "def __${1:init}__(self${2:, args}) -> ${3:None}:",
+      "    ${4:pass}$0"
+    ],
+    "description": "dunder method"
+  }
+}

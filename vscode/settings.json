@@ -1,0 +1,122 @@
+{
+  // ---- Look: Omarchy gruvbox, same as Zed ----
+  "workbench.colorTheme": "Gruvbox Dark Medium",
+  "workbench.iconTheme": "vscode-icons",
+  "vsicons.dontShowNewVersionMessage": true,
+  "workbench.startupEditor": "none",
+  "workbench.tree.indent": 20,
+  // ---- Font ----
+  "editor.fontFamily": "'JetBrainsMono Nerd Font', monospace",
+  "editor.fontSize": 14,
+  "editor.lineHeight": 1.3,
+  "editor.fontLigatures": true,
+  "terminal.integrated.fontFamily": "'JetBrainsMono Nerd Font'",
+  "editor.mouseWheelZoom": true,
+  // ---- Cursor ----
+  "editor.cursorStyle": "block",
+  "editor.cursorBlinking": "solid",
+  "terminal.integrated.cursorStyle": "block",
+  "terminal.integrated.cursorBlinking": false,
+  // ---- Editor ----
+  "editor.minimap.enabled": true,
+  "editor.minimap.autohide": "none",
+  "editor.stickyScroll.enabled": true,
+  "editor.guides.indentation": true,
+  "editor.rulers": [
+    80,
+    120
+  ],
+  "editor.inlayHints.enabled": "on",
+  "editor.snippetSuggestions": "top",
+  "breadcrumbs.enabled": false,
+  "workbench.editor.editorActionsLocation": "hidden",
+  "git.blame.editorDecoration.enabled": true,
+  // ---- Tabs ----
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "workbench.editor.tabActionLocation": "right",
+  "workbench.editor.decorations.badges": true,
+  "workbench.editor.decorations.colors": true,
+  // ---- Saving ----
+  "files.autoSave": "onFocusChange",
+  "editor.formatOnSave": true,
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  // ---- Network: VS Code ignores proxy_on ----
+  "http.proxy": "http://127.0.0.1:10809",
+  // ---- Python: ruff + basedpyright ----
+  "python.languageServer": "None",
+  "ruff.path": [
+    "/home/amirali/.local/bin/ruff"
+  ],
+  "basedpyright.analysis.typeCheckingMode": "basic",
+  "basedpyright.analysis.autoImportCompletions": true,
+  "[python]": {
+    "editor.tabSize": 4,
+    "editor.rulers": [
+      80
+    ],
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports.ruff": "explicit",
+      "source.fixAll.ruff": "explicit"
+    }
+  },
+  // ---- C / C++: clangd ----
+  "clangd.path": "/usr/bin/clangd",
+  "clangd.arguments": [
+    "--background-index",
+    "--clang-tidy",
+    "--header-insertion=iwyu",
+    "--completion-style=detailed",
+    "--all-scopes-completion",
+    "--limit-results=0",
+    "--pch-storage=memory",
+    "-j=4",
+    "--function-arg-placeholders=false",
+    "--compile-commands-dir=cmake-build-debug",
+    "--fallback-style={BasedOnStyle: LLVM, IndentWidth: 4, ColumnLimit: 120}"
+  ],
+  "[c]": {
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.rulers": [
+      120
+    ],
+    "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
+  },
+  "[cpp]": {
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.rulers": [
+      120
+    ],
+    "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
+  },
+  "cmake.buildDirectory": "${workspaceFolder}/cmake-build-debug",
+  "cmake.generator": "Ninja",
+  // ---- Rust: rust-analyzer + clippy ----
+  "rust-analyzer.server.path": "/home/amirali/.cargo/bin/rust-analyzer",
+  "rust-analyzer.check.command": "clippy",
+  "rust-analyzer.check.allTargets": true,
+  "rust-analyzer.cargo.features": "all",
+  "rust-analyzer.cargo.buildScripts.enable": true,
+  "rust-analyzer.procMacro.enable": true,
+  "rust-analyzer.completion.autoimport.enable": true,
+  "rust-analyzer.completion.callable.snippets": "fill_arguments",
+  "rust-analyzer.imports.granularity.group": "module",
+  "rust-analyzer.imports.prefix": "self",
+  "rust-analyzer.inlayHints.closingBraceHints.minLines": 20,
+  "rust-analyzer.inlayHints.lifetimeElisionHints.enable": "skip_trivial",
+  "rust-analyzer.inlayHints.chainingHints.enable": true,
+  "rust-analyzer.lens.enable": true,
+  "[rust]": {
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.rulers": [
+      100
+    ],
+    "editor.defaultFormatter": "rust-lang.rust-analyzer"
+  },
+  "window.density.layout": "compact"
+}

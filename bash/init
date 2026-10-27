@@ -1,0 +1,9 @@
+command -v mise     &>/dev/null && eval "$(mise activate bash)"
+command -v starship &>/dev/null && eval "$(starship init bash)"
+command -v zoxide   &>/dev/null && eval "$(zoxide init bash)"
+command -v fzf      &>/dev/null && eval "$(fzf --bash)"
+
+# Reset cursor to the terminal's configured style (block) at every prompt,
+# in case a program like nvim or a TUI left it as a bar
+_reset_cursor() { printf '\e[0 q'; }
+starship_precmd_user_func="_reset_cursor"

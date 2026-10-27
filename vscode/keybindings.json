@@ -1,0 +1,25 @@
+// Same alt shortcuts as the Zed config, on top of the IntelliJ keymap extension
+[
+  { "key": "alt+w", "command": "workbench.action.terminal.toggleTerminal" },
+  { "key": "alt+shift+w", "command": "workbench.action.terminal.new" },
+  { "key": "alt+c", "command": "workbench.action.closeActiveEditor" },
+  { "key": "ctrl+f4", "command": "workbench.action.closeActiveEditor" },
+  { "key": "alt+-", "command": "editor.action.fontZoomOut" },
+  { "key": "alt+=", "command": "editor.action.fontZoomIn" },
+  { "key": "alt+left", "command": "workbench.action.previousEditor" },
+  { "key": "alt+right", "command": "workbench.action.nextEditor" },
+  { "key": "alt+e", "command": "workbench.action.tasks.runTask" },
+  { "key": "alt+q", "command": "workbench.action.debug.start" },
+
+  { "key": "ctrl+y", "command": "editor.action.deleteLines", "when": "editorTextFocus && !editorReadonly" },
+  { "key": "alt+d", "command": "editor.action.deleteLines", "when": "editorTextFocus && !editorReadonly" },
+
+  { "key": "alt+j", "command": "workbench.action.toggleSidebarVisibility" },
+  { "key": "alt+o", "command": "workbench.action.openRecent" },
+  { "key": "alt+1", "command": "workbench.view.explorer" },
+  { "key": "alt+5", "command": "workbench.view.debug" },
+  { "key": "alt+6", "command": "workbench.actions.view.problems" },
+  { "key": "alt+7", "command": "outline.focus" },
+  { "key": "alt+9", "command": "workbench.view.scm" },
+  { "key": "ctrl+shift+f12", "command": "workbench.action.maximizeEditorHideSidebar" }
+]

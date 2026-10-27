@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+gsettings set org.gnome.desktop.interface gtk-theme 'Yaru-dark'
+gsettings set org.gnome.desktop.interface icon-theme 'Yaru-dark'
+gsettings set org.gnome.desktop.interface accent-color 'orange'
+gsettings set org.gnome.desktop.background picture-uri 'file:///usr/share/backgrounds/rubenslp-Twin_brothers.png'
+gsettings set org.gnome.desktop.background picture-uri-dark 'file:///usr/share/backgrounds/rubenslp-Twin_brothers.png'
+gsettings set org.gnome.desktop.interface font-name 'Ubuntu Sans 11'
+gsettings set org.gnome.desktop.interface document-font-name 'Sans 11'
+gsettings set org.gnome.desktop.interface monospace-font-name 'Ubuntu Sans Mono 11'
+gsettings set org.gnome.desktop.wm.preferences titlebar-font 'Ubuntu Sans Bold 11'

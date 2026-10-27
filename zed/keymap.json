@@ -1,0 +1,45 @@
+[
+  {
+    "bindings": {
+      "alt-w": "terminal_panel::Toggle",
+      "alt-shift-w": "workspace::NewTerminal",
+      "alt-c": "pane::CloseActiveItem",
+      "ctrl-f4": "pane::CloseActiveItem",
+      "alt-minus": "zed::DecreaseBufferFontSize",
+      "alt-=": "zed::IncreaseBufferFontSize",
+      "alt-left": "pane::ActivatePreviousItem",
+      "alt-right": "pane::ActivateNextItem",
+      "alt-e": "task::Spawn",
+      "alt-q": "debugger::Start"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-y": "editor::DeleteLine",
+      "alt-d": "editor::DeleteLine",
+      "alt-j": "multi_workspace::ToggleWorkspaceSidebar",
+      "alt-up": "editor::GoToPreviousSymbol",
+      "alt-down": "editor::GoToNextSymbol"
+    }
+  },
+  {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      "enter": "project_panel::OpenPermanent"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "alt-j": "multi_workspace::ToggleWorkspaceSidebar",
+      "alt-o": "projects::OpenRecent",
+      "alt-1": "project_panel::ToggleFocus",
+      "alt-5": "debug_panel::ToggleFocus",
+      "alt-6": "diagnostics::Deploy",
+      "alt-7": "outline_panel::ToggleFocus",
+      "alt-9": "git_panel::ToggleFocus",
+      "ctrl-shift-f12": "workspace::CloseAllDocks"
+    }
+  }
+]

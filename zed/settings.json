@@ -1,0 +1,194 @@
+{
+  "cli_default_open_behavior": "existing_window",
+  "proxy": "http://127.0.0.1:10809",
+  "auto_install_extensions": { "vscode-icons": true, "postgres-context-server": true },
+  // Zed ignores proxy_on; its downloads were timing out without this
+  "proxy": "http://127.0.0.1:10809",
+  "buffer_line_height": {"custom": 1.3},
+  "tabs": {
+    "close_position": "right",
+    "file_icons": true,
+    "git_status": true,
+    "show_diagnostics": "errors",
+  },
+  "preview_tabs": { "enabled": false },
+  "sticky_scroll": { "enabled": true },
+  "indent_guides": { "enabled": true },
+  "scrollbar": { "show": "auto" },
+  "git": { "inline_blame": { "enabled": true } },
+  "snippet_sort_order": "top",
+  "context_servers": {
+    "mcp-server-github": {
+      "enabled": true,
+      "remote": false,
+      "settings": {}
+    },
+    "postgres-context-server": {
+      "enabled": true,
+      "remote": false,
+      "settings": {
+        "database_url": "postgresql:///amirali?host=/var/run/postgresql",
+      },
+    },
+  },
+  "icon_theme": "VSCode Icons for Zed (Dark Official Icons)",
+  "project_panel": {
+    "dock": "left",
+    "folder_icons": true,
+    "indent_size": 20,
+  },
+  "outline_panel": {
+    "dock": "left",
+  },
+  "collaboration_panel": {
+    "dock": "left",
+  },
+  "agent": {
+    "dock": "right",
+    "favorite_models": [],
+    "model_parameters": [],
+  },
+  "git_panel": {
+    "dock": "left",
+  },
+  "status_bar": {
+    "experimental.show": true,
+  },
+  "mouse_wheel_zoom": true,
+  "minimap": {
+    "show": "always",
+  },
+  "cursor_shape": "block",
+  "autosave": "on_focus_change",
+  "buffer_font_size": 14.0,
+  "buffer_font_family": "JetBrainsMono Nerd Font",
+  "ensure_final_newline_on_save": true,
+  "format_on_save": "on",
+  "wrap_guides": [80, 120],
+  "base_keymap": "JetBrains",
+  "theme": "Omazed Darkest",
+  "ui_font_family": "JetBrainsMono Nerd Font",
+  "terminal": {
+    "font_family": "JetBrainsMono Nerd Font",
+  },
+  "remove_trailing_whitespace_on_save": true,
+  "languages": {
+    "Python": {
+      "language_servers": ["basedpyright", "ruff"],
+      "tab_size": 4,
+      "wrap_guides": [80],
+      "format_on_save": "on",
+      "formatter": [
+        {
+          "code_actions": {
+            "source.organizeImports.ruff": true,
+            "source.fixAll.ruff": true,
+          },
+        },
+        {
+          "language_server": {
+            "name": "ruff",
+          },
+        },
+      ],
+    },
+    "C++": {
+      "tab_size": 4,
+      "hard_tabs": false,
+      "format_on_save": "on",
+      "wrap_guides": [120],
+      "formatter": "auto",
+    },
+    "C": {
+      "tab_size": 4,
+      "hard_tabs": false,
+      "format_on_save": "on",
+      "wrap_guides": [120],
+      "formatter": "auto",
+    },
+    "Rust": {
+      "tab_size": 4,
+      "hard_tabs": false,
+      "format_on_save": "on",
+      "wrap_guides": [100],
+      "formatter": "language_server",
+      "inlay_hints": {
+        "enabled": true,
+        "show_type_hints": true,
+        "show_parameter_hints": true,
+        "show_other_hints": true,
+      },
+    },
+  },
+  "lsp": {
+    // Use globally installed servers so Zed never downloads its own
+    "ruff": {
+      "binary": { "path": "/home/amirali/.local/bin/ruff", "arguments": ["server"] },
+    },
+    "rust-analyzer": {
+      "binary": { "path": "/home/amirali/.cargo/bin/rust-analyzer" },
+      "initialization_options": {
+        "check": {
+          "command": "clippy",
+          "allTargets": true,
+        },
+        "cargo": {
+          "allFeatures": true,
+          "buildScripts": { "enable": true },
+        },
+        "procMacro": { "enable": true },
+        "completion": {
+          "autoimport": { "enable": true },
+          "callable": { "snippets": "fill_arguments" },
+        },
+        "imports": {
+          "granularity": { "group": "module" },
+          "prefix": "self",
+        },
+        "inlayHints": {
+          "closingBraceHints": { "minLines": 20 },
+          "lifetimeElisionHints": { "enable": "skip_trivial" },
+          "chainingHints": { "enable": true },
+        },
+        "lens": { "enable": true },
+      },
+    },
+    "basedpyright": {
+      "binary": { "path": "/home/amirali/.local/bin/basedpyright-langserver", "arguments": ["--stdio"] },
+      "settings": {
+        "basedpyright.analysis": {
+          "typeCheckingMode": "basic",
+          "autoImportCompletions": true,
+        },
+      },
+    },
+    "clangd": {
+      "binary": {
+        "path": "/usr/bin/clangd",
+        "arguments": [
+          "--background-index",
+          "--clang-tidy",
+          "--header-insertion=iwyu",
+          "--completion-style=detailed",
+          "--all-scopes-completion",
+          "--limit-results=0",
+          "--pch-storage=memory",
+          "-j=4",
+          "--function-arg-placeholders=false",
+          "--compile-commands-dir=cmake-build-debug",
+          "--fallback-style={BasedOnStyle: LLVM, IndentWidth: 4, ColumnLimit: 120}",
+        ],
+      },
+    },
+  },
+  "inlay_hints": {
+    "enabled": true,
+  },
+  "toolbar": {
+    "breadcrumbs": false,
+    "quick_actions": false,
+    "selections_menu": false,
+    "agent_review": false,
+    "code_actions": false,
+  },
+}

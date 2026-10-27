@@ -1,0 +1,15 @@
+charliermarsh.ruff
+detachhead.basedpyright
+jdinhlife.gruvbox
+k--kato.intellij-idea-keybindings
+llvm-vs-code-extensions.vscode-clangd
+ms-ossdata.vscode-pgsql
+ms-python.debugpy
+ms-python.python
+ms-python.vscode-python-envs
+ms-vscode.cmake-tools
+ms-vscode.cpp-devtools
+rust-lang.rust-analyzer
+tamasfe.even-better-toml
+vadimcn.vscode-lldb
+vscode-icons-team.vscode-icons

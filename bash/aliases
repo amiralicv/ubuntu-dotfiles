@@ -1,0 +1,30 @@
+# File system (Omarchy)
+if command -v eza &>/dev/null; then
+  alias ls='eza -lh --group-directories-first --icons=auto'
+  alias lsa='ls -a'
+  alias lt='eza --tree --level=2 --long --icons --git'
+  alias lta='lt -a'
+fi
+command -v bat &>/dev/null && alias ff="fzf --preview 'bat --style=numbers --color=always {}'"
+command -v zoxide &>/dev/null && alias cd='zd'
+
+# Directories
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+
+# Tools
+alias g='git'
+alias lg='lazygit'
+alias t='tmux attach || tmux new -s main'
+
+# Git
+alias gst='git status -sb'
+alias gcm='git commit -m'
+alias gcam='git commit -a -m'
+alias gcad='git commit -a --amend'
+
+# Docker / Postgres
+alias d='docker'
+alias dc='docker compose'
+alias ld='lazydocker'

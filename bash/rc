@@ -1,0 +1,5 @@
+# Loaded from ~/.bashrc — Omarchy-style modular config
+for f in shell aliases functions init; do
+  [ -r ~/.config/bash/$f ] && . ~/.config/bash/$f
+done
+unset f

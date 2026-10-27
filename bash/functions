@@ -1,0 +1,19 @@
+# cd that falls back to zoxide when the path doesn't exist (Omarchy)
+zd() {
+  if [ $# -eq 0 ]; then
+    builtin cd ~ && return
+  elif [ -d "$1" ]; then
+    builtin cd "$1"
+  else
+    z "$@" && printf "\U000F17A9 " && pwd || echo "Error: Directory not found"
+  fi
+}
+
+# Open nvim in cwd, or the given files
+n() { if [ "$#" -eq 0 ]; then nvim .; else nvim "$@"; fi; }
+
+# Open files with the desktop default app, silently
+open() { xdg-open "$@" >/dev/null 2>&1 & }
+
+# Make a directory and cd into it
+mkcd() { mkdir -p "$1" && builtin cd "$1"; }
